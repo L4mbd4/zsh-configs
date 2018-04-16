@@ -1,3 +1,5 @@
+# source https://github.com/theblazehen/lxd-zsh-completion
+
 autoload -Uz compinit
 autoload -Uz bashcompinit
 bashcompinit
