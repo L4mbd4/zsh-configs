@@ -16,5 +16,16 @@ function gb () {
     command git checkout -b "$1"
 }
 
+# misc file system aliases
 # alias for cd back one level
 alias b='cd ..'
+
+# function to remove a directory even if not empty
+function rd () {
+	if (( ARGC != 1 )); then
+        printf 'usage: rd <directoy path>\n'
+        return 1;
+    fi
+    
+    rm -rf "$1"
+}
