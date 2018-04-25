@@ -16,7 +16,11 @@ function gb () {
     command git checkout -b "$1"
 }
 
-# misc file system aliases
+# function for creating a gitignore file from gitignore.io
+function gengi() {
+ (curl -L -s https://www.gitignore.io/api/"$@") >> .gitignore ;
+}
+
 # alias for cd back one level
 alias b='cd ..'
 
