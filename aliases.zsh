@@ -5,7 +5,10 @@ export EDITOR=nano
 alias gaa='git add -A'
 alias gs='git status'
 alias gc='git commit'
+alias gcs='git commit -S'
 alias gca='git add -A && git commit'
+alias gcas='git add -A && git commit -S'
+alias grh='git reset --hard HEAD'
 
 # function to branch from current branch
 function gb () {
@@ -14,6 +17,15 @@ function gb () {
         return 1;
     fi
     command git checkout -b "$1"
+}
+
+# function to checkout branch
+function gcb () {
+	if (( ARGC != 1 )); then
+        printf 'usage: gb <new branch name>\n'
+        return 1;
+    fi
+    command git checkout "$1"
 }
 
 # function for creating a gitignore file from gitignore.io
