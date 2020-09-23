@@ -8,7 +8,11 @@ alias gc='git commit'
 alias gcs='git commit -S'
 alias gca='git add -A && git commit'
 alias gcas='git add -A && git commit -S'
-alias grh='git reset --hard HEAD'
+alias gr='git clean -df && git checkout -- .'
+alias glg='git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit'
+
+## aliases for yay
+alias sysupdate='yay -Syu'
 
 # function to branch from current branch
 function gb () {
@@ -33,8 +37,10 @@ function gengi() {
  (curl -L -s https://www.gitignore.io/api/"$@") >> .gitignore ;
 }
 
-# alias for cd back one level
+# alias for cd back one or more levels
 alias b='cd ..'
+alias bb='cd ../..'
+alias bbb='cd ../../..'
 
 # function to remove a directory even if not empty
 function rd () {
