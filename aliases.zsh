@@ -9,7 +9,7 @@ alias gcs='git commit -S'
 alias gca='git add -A && git commit'
 alias gcas='git add -A && git commit -S'
 alias gr='git clean -df && git checkout -- .'
-alias glg='git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit'
+alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 ## aliases for yay
 alias sysupdate='yay -Syu'
